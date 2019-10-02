@@ -1,0 +1,32 @@
+@import 'sass/header';
+@import 'sass/footer';
+@import 'sass/products';
+@import 'sass/navigation';
+
+@font-face {
+  font-family: "Shamber";
+  src: url(./fonts/Shamber.ttf) format('truetype');
+}
+  
+  //sub titles
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: .8px;
+}
+
+  // product slider
+  .slider {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+        width: 90%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.slick-prev:before, .slick-next:before {
+  color: rgb(0, 0, 0);
+}
