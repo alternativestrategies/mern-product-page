@@ -7,11 +7,15 @@ const Navigation = () => {
       <React.Fragment>
       {/* creates navbar in home page */}
         <Navbar expand="md" className='pb-4'>
-          
+        
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <h1><a href='/'>Arelys Stationary Box</a></h1>
             <Navbar.Collapse id="basic-navbar-nav">
+            
               <Nav className="ml-auto">
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
                 <Nav.Item>
                 <NavLink exact to="/">Home</NavLink>
                 </Nav.Item>
@@ -24,6 +28,7 @@ const Navigation = () => {
                   
               
               </Nav>
+              
             </Navbar.Collapse>
           </Navbar>
           {/* the title is in the navigation component because it will be on every page as opposed to the 'header' that's only on the home page */}

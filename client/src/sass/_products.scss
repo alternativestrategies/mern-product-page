@@ -63,21 +63,41 @@
       border: 1px solid black;
   }
   }
-
-  
   //styling for the filter menu and the checkbox on product page
-  .flex-menu {
-    display: flex;
-    width: 410px;
-    margin: 0 auto;
-    label {
-        margin-left: 10px;
+  .flex{
+    &-prod {
+      display: flex;
+      margin: 0 auto;
+      &-title{
+        text-align: left;
+          @media(min-width:500px){
+            margin-left: 5%;
+          }
+          @media(min-width: 1200px){
+            margin-left: 8%;
+          }
+      }
     }
-    &-select {
-        width: 150px;
-        margin: -5px 0 0 5px;
+    &-menu {
+      display: flex;
+      margin: 0 auto;
+      @media(min-width:500px){
+        margin-right: 5%;
+      }
+      @media(min-width: 1200px){
+        margin-right: 120px;
+      }
+      
+      label {
+          margin-left: 10px;
+      }
+      &-select {
+          width: 150px;
+          margin: -5px 0 0 5px;
+      }
     }
   }
+
   
   //checkbox styling
   input[type=checkbox] {

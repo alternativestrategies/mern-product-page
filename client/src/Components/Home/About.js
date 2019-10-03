@@ -11,7 +11,7 @@ const About = () => {
             </Row>
             <Row>
                 <Col xs={12} md={8} className="mx-auto">
-                <p>Arely's Stationary Box is about filling your life with the tools to be a reflective & thoughtful individual. We curate boxes full of tools to help you become your best self. We strive to find products to improve your life and fill it with joy.</p>
+                <p>We are a stationary company dedicated to bringing the best stationary to our clients. We curate boxes full of tools to help you become your best self. We believe that the world needs more thoughtful and reflective individuals. Our mission remains to improve the lives and patterns of our customers.</p>
                 </Col>
             </Row>
         </Container>

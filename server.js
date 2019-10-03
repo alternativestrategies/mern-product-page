@@ -2,7 +2,6 @@
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const apiRoutes = require('./routes/apiRoutes')
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -18,15 +17,19 @@ app.use(helmet());
 //removes X-Powered-By header and sets it to PHP 7.2.0
 app.use(helmet.hidePoweredBy({setTo: 'PHP 7.2.0'}))
 
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+const apiRoutes = require('./routes/apiRoutes');
+const bonusRoutes = require('./routes/bonusRoutes');
+
 //allows us to keep our routes neat in a separate file 
 app.use('/api', apiRoutes);
+app.use('/api', bonusRoutes);
 
+// Send every request to the React app
 app.get("*", (req, res)=> {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

@@ -2,32 +2,43 @@ import React, {Component} from "react";
 import Product from './Product';
 import Menu from './Menu';
 
-//we are going to use an api to generate content
+//we are going to use the api to generate content
 class ProductPage extends Component {
   state = {
     type: "",
-    checked: false,
     selectedOption: "",
     error: null,
     isLoaded: false,
     products: []
   }
 
-  //this sets checked in state to its inverse
-  toggleCheck = () => {
-    this.setState({
-      checked: !this.state.checked
-    })
-  }
-  
   //this function sets in state the selected user category
+  //it also makes an API call to fetch category
   handleChange = (selectedOption) => {
     this.setState({
       type: selectedOption.value,
-      selectedOption: selectedOption.label
+      selectedOption: selectedOption.value
+    }, () => {
+        this.fetchCategory()
     })
   }
-    
+
+  //callback that fetches api endpoint
+  fetchCategory = () => {
+    let endpoint;
+    if (this.state.type === "All" ){
+       endpoint = `/api/products`
+    } else {
+      endpoint = `/api/productfilter?category=${this.state.selectedOption}`
+    }
+    fetch(endpoint)
+    .then(res => res.json())
+    .then((data)=>{
+        this.setState({
+          products: data
+      })
+    })
+  }
 
   //will fetch products from the api and then set it in state
   componentDidMount(){
@@ -48,39 +59,6 @@ class ProductPage extends Component {
       )
   }
   render(){
-    const {products, type, checked } = this.state;
-    
-    let results = []
-
-    //sorts products by price
-    if(checked === true){
-      products.sort((a,b) => {
-        return b.price - a.price;
-      })
-    }
-    else if (checked === false){
-      products.reverse(products.price)
-    }
-
-    //filters products by category and then passes props to the child component
-    products.filter(item => {
-      if(type === 'All' || type === ""){
-        results.push(<Product key={item.product_id}
-          name={item.product_name}
-          photos={item.product_img}
-          description={item.product_description}
-          price={item.price}/>)
-      }
-      else if(type === item.category){
-        results.push(<Product key={item.product_id}
-          name={item.product_name}
-          photos={item.product_img}
-          description={item.product_description}
-          price={item.price}/>)
-      }
-      return results;
-    })
-
     return(
       <React.Fragment>
       <Menu 
@@ -90,8 +68,14 @@ class ProductPage extends Component {
       category={this.category}
       handleChange={this.handleChange}/>
       <div className="grid">
-         {results}
-     </div>
+         {this.state.products.map(item => 
+         <Product key={item.product_id}
+          name={item.product_name}
+          photos={item.product_img}
+          description={item.product_description}
+          price={item.price}/>)
+         }
+      </div>
       </React.Fragment>
       
     );

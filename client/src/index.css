@@ -38,106 +38,6 @@ h1 a:hover {
   }
 }
 
-.pink-bg {
-  height: 500px;
-  background-color: #FFE9EC;
-  position: absolute;
-  top: 150;
-}
-@media (min-width: 400px) {
-  .pink-bg {
-    width: 75%;
-    margin-left: 15%;
-  }
-}
-@media (min-width: 600px) {
-  .pink-bg {
-    width: 70%;
-    margin-left: 20%;
-  }
-}
-@media (min-width: 700px) {
-  .pink-bg {
-    width: 55%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 800px) {
-  .pink-bg {
-    width: 75%;
-    margin-left: 20%;
-  }
-}
-@media (min-width: 900px) {
-  .pink-bg {
-    width: 75%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .pink-bg {
-    width: 55%;
-    margin-left: 35%;
-  }
-}
-
-#slideshow {
-  margin-top: 60px;
-  position: relative;
-  height: 500px;
-  padding: 10px;
-}
-@media (min-width: 400px) {
-  #slideshow {
-    width: 80%;
-    margin-left: 5%;
-  }
-}
-@media (min-width: 600px) {
-  #slideshow {
-    width: 70%;
-    margin-left: 10%;
-  }
-}
-@media (min-width: 700px) {
-  #slideshow {
-    width: 60%;
-    margin-left: 20%;
-  }
-}
-@media (min-width: 800px) {
-  #slideshow {
-    width: 75%;
-    margin-left: 10%;
-  }
-}
-@media (min-width: 900px) {
-  #slideshow {
-    width: 80%;
-    margin-left: 15%;
-  }
-}
-@media (min-width: 1200px) {
-  #slideshow {
-    width: 55%;
-    margin-left: 30%;
-  }
-}
-
-#slideshow img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-#slideshow > div {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-}
-
 @media (min-width: 800px) {
   .shop-now {
     margin-top: 120px;
@@ -149,9 +49,10 @@ h1 a:hover {
     width: 60%;
   }
 }
+
 @media (min-width: 400px) {
   .shop-now-title {
-    font-size: 26px;
+    font-size: 30px;
   }
 }
 @media (min-width: 700px) {
@@ -170,6 +71,7 @@ h1 a:hover {
     margin-left: 10%;
   }
 }
+
 .shop-now-btn {
   background-color: white;
   color: black;
@@ -218,6 +120,7 @@ h1 a:hover {
     margin-left: 30%;
   }
 }
+
 @media (min-width: 400px) {
   .shop-now-sub {
     margin-left: 10%;
@@ -225,7 +128,7 @@ h1 a:hover {
 }
 @media (min-width: 700px) {
   .shop-now-sub {
-    margin-left: 20%;
+    margin-left: 23%;
   }
 }
 @media (min-width: 900px) {
@@ -349,10 +252,36 @@ h1 a:hover {
   border: 1px solid black;
 }
 
+.flex-prod {
+  display: flex;
+  margin: 0 auto;
+}
+.flex-prod-title {
+  text-align: left;
+}
+@media (min-width: 500px) {
+  .flex-prod-title {
+    margin-left: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-prod-title {
+    margin-left: 8%;
+  }
+}
 .flex-menu {
   display: flex;
-  width: 410px;
   margin: 0 auto;
+}
+@media (min-width: 500px) {
+  .flex-menu {
+    margin-right: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-menu {
+    margin-right: 120px;
+  }
 }
 .flex-menu label {
   margin-left: 10px;
@@ -410,26 +339,128 @@ input[type=checkbox] + span {
   border-bottom: 1px solid #000;
 }
 
-@media (min-width: 1000px) {
-  .nav-item .active {
-    color: black;
-    border-bottom: 1px solid #000;
-  }
-}
 @media (min-width: 800px) {
   .nav-item {
     margin-top: -30px;
   }
 }
-
-@font-face {
-  font-family: "Shamber";
-  src: url(./fonts/Shamber.ttf) format("truetype");
+@media (min-width: 900px) {
+  .nav-item .active {
+    color: black;
+    border-bottom: 1px solid #000;
+  }
 }
-h2 {
-  text-align: center;
-  font-size: 26px;
-  letter-spacing: 0.8px;
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0, 0, 0)' stroke-width='1.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  border: 1px solid white;
+}
+.navbar-light .navbar-toggler {
+  border: 1px solid white;
+  font-size: 1.4rem;
+}
+.navbar-light .navbar-toggler:focus {
+  outline: 1px solid white;
+}
+
+.pink-bg {
+  height: 500px;
+  background-color: #FFE9EC;
+  position: absolute;
+  top: 150;
+}
+@media (min-width: 400px) {
+  .pink-bg {
+    width: 75%;
+    margin-left: 15%;
+  }
+}
+@media (min-width: 600px) {
+  .pink-bg {
+    width: 70%;
+    margin-left: 20%;
+  }
+}
+@media (min-width: 700px) {
+  .pink-bg {
+    width: 55%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 800px) {
+  .pink-bg {
+    width: 75%;
+    margin-left: 20%;
+  }
+}
+@media (min-width: 900px) {
+  .pink-bg {
+    width: 75%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .pink-bg {
+    width: 55%;
+    margin-left: 35%;
+  }
+}
+
+#slideshow {
+  margin-top: 60px;
+  position: relative;
+  height: 500px;
+  padding: 10px;
+}
+@media (min-width: 400px) {
+  #slideshow {
+    width: 80%;
+    margin-left: 5%;
+  }
+}
+@media (min-width: 600px) {
+  #slideshow {
+    width: 70%;
+    margin-left: 10%;
+  }
+}
+@media (min-width: 700px) {
+  #slideshow {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+@media (min-width: 800px) {
+  #slideshow {
+    width: 75%;
+    margin-left: 10%;
+  }
+}
+@media (min-width: 900px) {
+  #slideshow {
+    width: 80%;
+    margin-left: 15%;
+  }
+}
+@media (min-width: 1200px) {
+  #slideshow {
+    width: 55%;
+    margin-left: 30%;
+  }
+}
+
+#slideshow img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
 }
 
 .slider {
@@ -445,6 +476,55 @@ h2 {
 
 .slick-prev:before, .slick-next:before {
   color: black;
+}
+
+.btn-form {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+}
+.btn-form:hover {
+  background-color: #333333;
+}
+
+.reviews {
+  display: grid;
+}
+@media (min-width: 600px) {
+  .reviews {
+    grid-template-columns: 50% 50%;
+    padding: 0 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews {
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 0 14px;
+  }
+}
+.reviews-product {
+  line-height: 1;
+  font-size: 12px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.reviews-comments {
+  line-height: 0.5;
+  color: #727171;
+}
+
+@font-face {
+  font-family: "Shamber";
+  src: url(./fonts/Shamber.ttf) format("truetype");
+}
+h2 {
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 0.8px;
 }
 
 /*# sourceMappingURL=index.css.map */

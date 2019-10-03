@@ -5,6 +5,16 @@ const request = require('request');
 //tests api endpoints
 describe('API ENDPOINT TESTS', () => {
 
+    //tests the index page
+    it('/', () => {
+        request('http://localhost:3000/', (err, res, body)=> {
+            //false test
+            //expect(res.statusCode).to.equal(500);
+            expect(res.statusCode).to.equal(200);
+            done();
+        })
+    })
+
     //tests whether products are returned
     it('/GET products', (done) => {
         request(`http://localhost:3001/api/products`, (err, res, body)=> {
@@ -27,15 +37,11 @@ describe('API ENDPOINT TESTS', () => {
         })
     })
 
-    //tess whether the total price of a product quantity is returned
     it('returns the the total price of a product quantity', (done) => {
-        request(`http://localhost:3001/api/productinvoice/1/2`, (err, res, body)=> {
+        request(`http://localhost:3001/api/productfilter?category=tape`, (err, res, body)=> {
            let data = JSON.parse(body);
             expect(res.statusCode).to.equal(200);
             expect(data).to.be.a('array');
-            (data).forEach(obj => {
-                expect(obj).to.have.property('product_name');
-            })
             done();
         })
     })

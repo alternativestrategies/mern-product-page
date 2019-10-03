@@ -65,8 +65,10 @@ render(){
             <p className="shop-now-sub">
               Shop our exclusive collection of planners and journals
             </p>
+            <a href="/product">
             <Button className="shop-now-btn">
-              <a href="/product">Shop Now</a></Button>
+              Shop Now</Button>
+              </a>
             </div>
           </div>
         </div>

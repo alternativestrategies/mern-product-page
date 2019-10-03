@@ -31,87 +31,6 @@ h1 {
     }
 }
 
-//pink bg
-.pink-bg {
-    height: 500px;
-    background-color: #FFE9EC;
-    position: absolute;
-    top: 150;
-    @media (min-width: 400px){
-        width: 75%;
-        margin-left: 15%;
-    }
-    @media (min-width: 600px){
-        width: 70%;
-       margin-left: 20%;
-    }
-    @media (min-width: 700px){
-        width: 55%;
-       margin-left: 25%;
-    }
-    @media (min-width: 800px){
-        width: 75%;
-       margin-left: 20%;
-    }
-    @media (min-width: 900px){
-        width: 75%;
-       margin-left: 25%;
-    }
-    @media (min-width: 1200px){
-        width: 55%;
-       margin-left: 35%;
-    }
-}
-   
-//slideshow container
-#slideshow {
-    margin-top: 60px;
-    position: relative; 
-    height: 500px;
-    padding: 10px;
-    @media (min-width: 400px){
-        width: 80%;
-        margin-left: 5%;
-    }
-    @media (min-width: 600px){
-        width: 70%;
-       margin-left: 10%;
-    }
-    @media (min-width: 700px){
-        width: 60%;
-       margin-left: 20%;
-    }
-    @media (min-width: 800px){
-        width: 75%;
-       margin-left: 10%;
-    }
-    @media (min-width: 900px){
-        width: 80%;
-        margin-left: 15%;
-    }
-    @media (min-width: 1200px){
-        width: 55%;
-        margin-left: 30%; 
-    }
-}
-  
-//slideshow images
-  #slideshow img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-//first child of slideshow which changes as images are looped
-  #slideshow > div {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-  }
-
-
 //fall must haves headline, lead and shop now button
 .shop-now {
     @media(min-width: 800px){
@@ -122,76 +41,81 @@ h1 {
         margin-top: 120px;
         width: 60%;
     }
-    &-title{
-        @media (min-width: 400px){
-            font-size: 26px;
-        }
-        @media (min-width: 700px){
-            margin-left: 5%;
-        }
-        @media (min-width: 900px){
-            font-size: 40px;
-            margin-left: 20%;
-        }
-        @media (min-width: 1200px){
-            margin-left: 10%;
-        }
+}
+
+//shop-now-title
+.shop-now-title{
+    @media (min-width: 400px){
+        font-size: 30px;
     }
-    &-btn {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-        padding: 15px 50px;
-        &:hover{
-            color: black;
-            background-color: white;
-            border-color: black;
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 16px, rgba(0, 0, 0, 0.1) 0px 0px 5px;
-        }
-        &.btn-primary:focus{
-            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
-            outline: 1px solid white;
-        }
-        &.btn-primary:not(:disabled):not(.disabled):active{
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-        }
-        a {
-            color: black;
-            &:hover {
-                color: black;
-                text-decoration: none;
-            }
-        }
-        @media (min-width: 400px){
-            margin-left: 35%;
-        }
-        @media (min-width: 700px){
-            margin-left: 40%;
-        }
-        @media (min-width: 900px){
-            margin-left: 35%;
-        }
-        @media (min-width: 1200px){
-            margin-left: 30%;
-        }
+    @media (min-width: 700px){
+        margin-left: 5%;
     }
-    &-sub {
-        @media (min-width: 400px){
-            //font-size: 26px;
-            margin-left: 10%;
-        }
-        @media (min-width: 700px){
-            margin-left: 20%;
-        }
-        @media (min-width: 900px){
-            //font-size: 40px;
-            margin-left: 20%;
-        }
-        @media (min-width: 1200px){
-            margin-left: 5%;
-        }
+    @media (min-width: 900px){
+        font-size: 40px;
+        margin-left: 20%;
+    }
+    @media (min-width: 1200px){
+        margin-left: 10%;
     }
 }
 
+
+//shop-now-btn
+.shop-now-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 15px 50px;
+    &:hover{
+        color: black;
+        background-color: white;
+        border-color: black;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 16px, rgba(0, 0, 0, 0.1) 0px 0px 5px;
+    }
+    &.btn-primary:focus{
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+        outline: 1px solid white;
+    }
+    &.btn-primary:not(:disabled):not(.disabled):active{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+    a {
+        color: black;
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    @media (min-width: 400px){
+        margin-left: 35%;
+    }
+    @media (min-width: 700px){
+        margin-left: 40%;
+    }
+    @media (min-width: 900px){
+        margin-left: 35%;
+    }
+    @media (min-width: 1200px){
+        margin-left: 30%;
+    }
+}
+
+
+//shop-now-sub
+.shop-now-sub {
+    @media (min-width: 400px){
+        margin-left: 10%;
+    }
+    @media (min-width: 700px){
+        margin-left: 23%;
+    }
+    @media (min-width: 900px){
+        margin-left: 20%;
+    }
+    @media (min-width: 1200px){
+        margin-left: 5%;
+    }
+}

@@ -29,17 +29,14 @@ const customStyles = {
 
 const Menu = (props) => {
     return(
-      <div className="flex-menu pt-3 pb-4">
+      <React.Fragment>
+        <div className="flex-prod">
+          <div className="flex-prod-title">
+          <h2>Shop All Products</h2>
+          </div>
+        
+      <div className="flex-menu pb-">
         {/* this is for the sort */}
-        <div>
-        <label htmlFor="price">Price: High to Low</label>
-           <span onClick={props.toggleCheck}>
-            <input 
-            type="checkbox"
-            checked={props.checked}/>
-            <span></span>
-          </span>
-        </div>
         <div>
         <label htmlFor="category">Category</label>
         </div>
@@ -60,7 +57,8 @@ const Menu = (props) => {
         })}/>
         </div>
       </div>
-        
+        </div>
+      </React.Fragment>
     );
 }
 
