@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Slider from 'react-slick';
-import Products from '../../Data.json';
 
 
 const settings = {
@@ -37,20 +36,37 @@ const settings = {
 }
 
 const ProductSlider = () => {
+  const [products, setProducts] = useState([]);
+
+  const fetchProducts = async () => {
+    try{
+      const res = await fetch('api/products');
+      const text = await res.text();
+        const response = text.length ? JSON.parse(text) : {}
+      setProducts(response)
+    }
+    catch (error){
+      throw error;
+    }
+  }
+
+  useEffect(() => {
+    fetchProducts()
+  }, []);
+
+    
   return(
 <div className="slider">  
       <h2 className="pt-4 pb-2">Search Products</h2>  
         <Slider {...settings}>
-          {Products
-          .map( product => 
-            
-            <div key={product.id} className="slide">
-          
+          {products
+          .map( p => 
+            <div key={p.product_id} className="slide">
             <img 
-                src={product.photos} 
-                alt={product.name}/>
-            
+              src={`assets/img/${p.product_img}`}
+              alt={p.product_name}/>
             </div>
+
             )}
         </Slider>
       </div>

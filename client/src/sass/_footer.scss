@@ -1,16 +1,16 @@
 //footer styles
 .footer {
     background-color: black;
-    height: 80vh;
     color: white;
     flex-shrink: 0;
+    
     .submit-btn {
         border: none;
         background-color: white;
         color: black;
     }
     &-lead {
-        margin-top: 80px;
+        margin-top: 30px;
         font-size: 1.55rem;
         font-weight: 500;
         letter-spacing: .8px;

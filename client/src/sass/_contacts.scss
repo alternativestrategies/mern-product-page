@@ -11,7 +11,7 @@
 }
 
 .reviews{
-    display: grid;    
+    display: grid;  
     
     @media (min-width: 600px){
         grid-template-columns: 50% 50%;
@@ -19,7 +19,8 @@
     }
     @media (min-width: 1200px){
         grid-template-columns: 25% 25% 25% 25%;
-        padding: 0 14px;
+        max-width: 80%;
+        margin: 0 auto;
     }
     
     &-product{

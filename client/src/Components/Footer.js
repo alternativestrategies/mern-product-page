@@ -6,7 +6,7 @@ const Footer = () => {
     let lastMod = document.lastModified;
 
     return(
-        <footer className="footer text-center pb-4 pt-4">
+        <footer className="footer text-center pb-4">
             <Container fluid={true}>
                 <Row>
                     <Col xs={10} sm={8} md={6} lg={4} className="mx-auto">

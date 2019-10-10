@@ -11,9 +11,7 @@ import Footer from './Components/Footer';
 class App extends Component {
 
   render(){
- 
     return (
-
       //navigation within single page app
       <React.Fragment>
         <BrowserRouter>

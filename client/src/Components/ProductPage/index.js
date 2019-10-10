@@ -26,7 +26,7 @@ class ProductPage extends Component {
   //callback that fetches api endpoint
   fetchCategory = () => {
     let endpoint;
-    if (this.state.type === "All" ){
+    if (this.state.type === "All" || this.state.type === ""){
        endpoint = `/api/products`
     } else {
       endpoint = `/api/productfilter?category=${this.state.selectedOption}`
@@ -36,27 +36,20 @@ class ProductPage extends Component {
     .then((data)=>{
         this.setState({
           products: data
-      })
-    })
-  }
-
-  //will fetch products from the api and then set it in state
-  componentDidMount(){
-    fetch('/api/products')
-      .then(res => res.json())
-      .then(
-        (data) => {
-          this.setState({
-            isLoaded: true,
-            products: data
-          });
-        },
-        (error) => 
+      });
+    },
+    (error) => 
         this.setState({
           isLoaded: true,
           error
         })
-      )
+    
+    )
+  }
+
+  //will fetch products from the api and then set it in state
+  componentDidMount(){
+    this.fetchCategory();
   }
   render(){
     return(

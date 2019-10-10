@@ -6,7 +6,7 @@ const request = require('request');
 describe('API ENDPOINT TESTS', () => {
 
     //tests the index page
-    it('/', () => {
+    it('/', (done) => {
         request('http://localhost:3000/', (err, res, body)=> {
             //false test
             //expect(res.statusCode).to.equal(500);

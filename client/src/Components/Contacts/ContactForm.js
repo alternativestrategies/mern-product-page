@@ -1,27 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Form, Col, Container,  Row} from 'react-bootstrap';
 
 const ContactForm = (props) => {
-    //const {first_name, last_name, email} = props.state;
+    const [validated, setValidated] = useState(false);
+
+    //bootstrap validation function
+    const handleForm = (e) => {
+      const form = e.currentTarget;
+      if(form.checkValidity() === false){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      setValidated(true);
+    }
+    
+    //allows me to pass values of form to state and capture and use bootstrap validation
+    const submitAll = (e) => {
+      handleForm(e); 
+      if(validated === true){
+        props.onSubmit()
+      }
+    }
+
     return(
-        <div className="no-bg pb-4 ">
-  <h2>Contact Us</h2>
-<Container>
-<Row>
-<Col xs={10} md={7} className="mx-auto mt-4 mb-3">
-<Form onSubmit={props.onSubmit}>
-  <Form.Row>
-    <Form.Group as={Col} controlId="firstName">
-      <Form.Label>First Name</Form.Label>
-      <Form.Control 
-      required
-      type="text" 
-      name="first_name"
-      value={props.first_name}
-      onChange={props.onChange}
-      placeholder="First Name" />
-      <Form.Control.Feedback type="invalid">Please enter first name</Form.Control.Feedback>
-    </Form.Group>
+    <div className="no-bg pb-4 ">
+      <h2>Contact Us</h2>
+    <Container fluid={true}>
+    <Row>
+    <Col xs={10} md={7} className="mx-auto mt-4 mb-3">
+    <Form noValidate validated={validated} onSubmit={submitAll}>
+      <Form.Row>
+        <Form.Group as={Col} controlId="firstName">
+          <Form.Label>First Name</Form.Label>
+          <Form.Control 
+          required
+          type="text" 
+          name="first_name"
+          value={props.first_name}
+          onChange={props.onChange}
+          placeholder="First Name" />
+          <Form.Control.Feedback type="invalid">Please enter first name</Form.Control.Feedback>
+        </Form.Group>
 
     <Form.Group as={Col} controlId="lastName">
       <Form.Label>Last Name</Form.Label>
@@ -68,6 +87,7 @@ const ContactForm = (props) => {
       as="select" 
       name="product_id"
       onChange={props.onChange}>
+      <option></option>
       <option  value="0">Choose...</option>
       <option value="1">Pages of Petals Daisy Notebook</option>
       <option value="1">Creative Die Cut Washi Tapes</option>

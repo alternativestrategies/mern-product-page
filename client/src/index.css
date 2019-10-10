@@ -144,7 +144,6 @@ h1 a:hover {
 
 .footer {
   background-color: black;
-  height: 80vh;
   color: white;
   flex-shrink: 0;
 }
@@ -154,7 +153,7 @@ h1 a:hover {
   color: black;
 }
 .footer-lead {
-  margin-top: 80px;
+  margin-top: 30px;
   font-size: 1.55rem;
   font-weight: 500;
   letter-spacing: 0.8px;
@@ -501,7 +500,8 @@ input[type=checkbox] + span {
 @media (min-width: 1200px) {
   .reviews {
     grid-template-columns: 25% 25% 25% 25%;
-    padding: 0 14px;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 .reviews-product {

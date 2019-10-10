@@ -22,6 +22,7 @@ class Contacts extends React.Component{
     })
   }
 
+  //will capture form data on submit and post to database
   onSubmit = (e) => {
     const {first_name, last_name, email, comments, product_id} = this.state;
     axios.post('/api/newcontacts', {first_name, last_name, email, product_id, comments  })
@@ -34,6 +35,7 @@ class Contacts extends React.Component{
     })
   }
 
+  //allows me to get contacts from api
   componentDidMount = () => {
     fetch('/api/contacts')
       .then(res => res.json())
@@ -47,7 +49,7 @@ class Contacts extends React.Component{
         this.setState({
           error
         })
-      )
+    )
   }
 
   render(){
