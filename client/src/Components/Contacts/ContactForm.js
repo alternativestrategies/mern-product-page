@@ -90,15 +90,15 @@ const ContactForm = (props) => {
       <option></option>
       <option  value="0">Choose...</option>
       <option value="1">Pages of Petals Daisy Notebook</option>
-      <option value="1">Creative Die Cut Washi Tapes</option>
-      <option value="2">Skydue Floral File Accordion</option>
-      <option value="3">Stabilo Boss Pastel Highlighter 6-pack</option>
-      <option value="4">LE PEN 10-PACK - RAINBOW</option>
-      <option value="5">Zebra Mildliner 15ct Dual-tip Markers</option>
-      <option value="6">Large 17-Month Academic Planner</option>
-      <option value="7">Chinatown Market X Smiley UO Exclusive Smiley Notebook</option>
-      <option value="8">My Neighbor Totoro Gel Ink Pen</option>
-      <option value="9">10 Psc Candy Color Decorative Adhesive Tapes</option>
+      <option value="11">Creative Die Cut Washi Tapes</option>
+      <option value="21">Skydue Floral File Accordion</option>
+      <option value="31">Stabilo Boss Pastel Highlighter 6-pack</option>
+      <option value="41">LE PEN 10-PACK - RAINBOW</option>
+      <option value="51">Zebra Mildliner 15ct Dual-tip Markers</option>
+      <option value="61">Large 17-Month Academic Planner</option>
+      <option value="71">Chinatown Market X Smiley UO Exclusive Smiley Notebook</option>
+      <option value="81">My Neighbor Totoro Gel Ink Pen</option>
+      <option value="91">10 Psc Candy Color Decorative Adhesive Tapes</option>
       </Form.Control>
       <Form.Control.Feedback type="invalid">Topic is required</Form.Control.Feedback>
   </Form.Group>
