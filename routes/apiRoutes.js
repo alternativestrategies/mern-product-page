@@ -3,13 +3,13 @@ const mysql = require('mysql');
 require('dotenv').config();
 
 //creating connection to mysql database
-const con = mysql.createConnection({
-    database: process.env.DB,
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD
-})
+  const con = mysql.createPool({
+      database: process.env.DB,
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD
+  })
 
 //responding with products from the database
 router.get('/products', (req, res) => {
